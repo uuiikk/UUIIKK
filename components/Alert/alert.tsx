@@ -23,17 +23,52 @@ export const alertVariants = cva(styles.alert, {
 	},
 })
 
+const alertLabel = (action: unknown) => {
+	switch (action) {
+		case 'info':
+			return 'Information'
+		case 'warning':
+			return 'Warning'
+		case 'error':
+			return 'Error'
+		case 'success':
+			return 'Success'
+		default:
+			return 'Information'
+	}
+}
+
+const alertDesc = (action: unknown) => {
+	switch (action) {
+		case 'info':
+			return 'This is a info alert!'
+		case 'warning':
+			return 'This is a warning alert!'
+		case 'error':
+			return 'This is a error alert!'
+		case 'success':
+			return 'This is a success alert!'
+		default:
+			return 'This is a info alert!'
+	}
+}
+
+
 export interface AlertProps
 	extends React.HTMLAttributes<HTMLDivElement>,
-		VariantProps<typeof alertVariants> {}
+		VariantProps<typeof alertVariants> {
+            onClick?: () => void;
+	label?: string
+	desc?: string
+}
 
-export const Alert: React.FC<AlertProps> = ({ variant, action }) => {
+export const Alert: React.FC<AlertProps> = ({ variant, action, ...props }) => {
 	return (
-		<div className={alertVariants({ variant, action })}>
+		<div id='alert' className={alertVariants({ variant, action })}>
 			<div></div>
-			<label >Warning</label>
-			<label >This is a warning alert!</label>
-			<button><span></span></button>
+			<label>{props.label ? props.label : alertLabel(action)}</label>
+			<label>{props.desc ? props.desc : alertDesc(action)}</label>
+			<button onClick={props.onClick} />
 		</div>
 	)
 }
