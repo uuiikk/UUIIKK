@@ -1,0 +1,24 @@
+.sidebar {
+  width: 400px;
+  height: 98vh;
+  background-color: #666;
+  padding: 10px;
+  border-radius: 20px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+.components {
+  display: flex;
+  margin-top: 10px;
+  width: 100%;
+  height: max-content;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.drag {
+  background-color: red;
+}

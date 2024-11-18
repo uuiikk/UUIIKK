@@ -1,0 +1,23 @@
+/* styles/Home.module.css */
+.page {
+  display: flex;
+  height: 100vh;
+}
+.buttonClear {
+  top: 10px !important;
+  left:unset !important;
+  right: 110px !important;
+  z-index: 2;
+}
+.buttonDownload {
+  top: 10px !important;
+  left:unset !important;
+  right: 10px !important;
+  z-index: 2;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  &:hover{
+    background-color: #898989!important;
+    color: #ffffff!important;
+  }
+}

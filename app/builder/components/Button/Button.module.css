@@ -1,0 +1,92 @@
+.button {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+	cursor: pointer;
+    border: none;
+	border-radius: 10px;
+	font-weight: 700;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	transition: all 0.2s linear;
+	&[disabled] {
+		cursor: not-allowed;
+		opacity: 0.65;
+	}
+}
+.button_default {
+	background-color: #fda41e;
+	color: white;
+	&:hover {
+		background-color: #b97715;
+	}
+}
+.button_destructive {
+	background-color: #fd1e1e;
+	color: white;
+	&:hover {
+		background-color: #ff4d4d;
+	}
+}
+.button_outline {
+	background-color: #ffffff00;
+	color: white;
+	border: #1efdb6 !important;
+	border-width: 4px !important;
+	border-style: solid !important;
+	&:hover {
+		background-color: #1efdb6;
+	}
+}
+.button_link {
+	background-color: #5a1efd;
+	color: white;
+	&:hover {
+		background-color: #7f50ff;
+		text-decoration: underline;
+	}
+}
+.button_ghost {
+	background-color: #ffffff00;
+	color: white;
+	&:hover {
+		background-color: #1aa5c4;
+	}
+}
+.button_size_default {
+	padding: 11px 20px;
+	font-size: 14px;
+}
+.button_size_small {
+	padding: 10px 16px;
+	font-size: 12px;
+}
+.button_size_medium {
+	padding: 12px 24px;
+	font-size: 16px;
+}
+.button_size_large {
+	padding: 14px 28px;
+	font-size: 20px;
+}
+.button_size_icon {
+	background-image: url('https://img.icons8.com/?size=48&id=10287&format=png&color=FF0000');
+    background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	width: 52px;
+	height: 52px;
+}
+
+
+.draggable {
+  padding: 10px 20px;
+  background-color: #0070f3;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
