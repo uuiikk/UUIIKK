@@ -8,6 +8,9 @@ const Home: React.FC = () => {
 	const clear = () => {
 		console.log('clear')
 	}
+		const download = () => {
+			console.log('download')
+		}
 	return (
 		<div className={styles.page}>
 			<LeftPanel />
@@ -21,7 +24,7 @@ const Home: React.FC = () => {
 			<Button
 				label='Скачать'
 				className={styles.buttonDownload}
-				onClick={clear}
+				onClick={download}
 			/>
 		</div>
 	)

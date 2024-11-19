@@ -1,4 +1,4 @@
-import React, { LegacyRef, ReactElement, ReactNode, useEffect, useState } from 'react'
+import React, {useEffect, useState } from 'react'
 import styles from './TargetArea.module.css'
 import { Button } from '../Button/Button'
 

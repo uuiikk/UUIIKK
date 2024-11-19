@@ -22,9 +22,7 @@ const LeftPanel: React.FC = () => {
 			<hr />
 			<div className={styles.components}>
 				<ComponentContainer
-					onDragStart={e =>
-						handleDragStart(e, 'ButtonDefault', Button.displayName)
-					}
+					onDragStart={e => handleDragStart(e, 'ButtonDefault', Button.displayName)}
 					element={<Button label={'Моя кнопка'} />}
 					name={Button.displayName}
 				/>
